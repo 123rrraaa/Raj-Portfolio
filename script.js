@@ -63,4 +63,41 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.opacity = '1';
     });
 
+    // ---------- Strength Concept Modal ----------
+    const modal = document.getElementById('strengthModal');
+    const modalIcon = document.getElementById('modalIcon');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalClose = document.getElementById('modalClose');
+
+    document.querySelectorAll('.strength-item.clickable').forEach(item => {
+        item.addEventListener('click', () => {
+            const concept = item.getAttribute('data-concept');
+            const icon = item.querySelector('.strength-icon').textContent;
+            const title = item.querySelector('span').textContent;
+
+            modalIcon.textContent = icon;
+            modalTitle.textContent = title;
+            modalDescription.textContent = concept;
+            modal.classList.add('active');
+        });
+    });
+
+    // Close modal
+    modalClose.addEventListener('click', () => {
+        modal.classList.remove('active');
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            modal.classList.remove('active');
+        }
+    });
+
 });
