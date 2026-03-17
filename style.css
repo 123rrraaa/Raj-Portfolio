@@ -678,7 +678,6 @@ body {
     border-radius: 50%;
     color: var(--text-secondary);
     font-size: 1.3rem;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
