@@ -595,6 +595,125 @@ body {
     color: var(--text-secondary);
 }
 
+/* ---------- Clickable Strengths ---------- */
+.strength-item.clickable {
+    cursor: pointer;
+    position: relative;
+}
+
+.strength-item.clickable::after {
+    content: '↗';
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    font-size: 0.65rem;
+    color: var(--accent-2);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.strength-item.clickable:hover::after {
+    opacity: 1;
+}
+
+.strength-item.clickable:hover {
+    background: rgba(108, 92, 231, 0.1);
+    border-color: rgba(108, 92, 231, 0.4);
+    box-shadow: 0 0 20px rgba(108, 92, 231, 0.12);
+}
+
+/* ---------- Strength Modal ---------- */
+.strength-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.strength-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.strength-modal {
+    position: relative;
+    max-width: 480px;
+    width: 90%;
+    padding: 36px 32px 32px;
+    background: rgba(18, 18, 30, 0.92);
+    border: 1px solid rgba(108, 92, 231, 0.3);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow:
+        0 24px 80px rgba(0, 0, 0, 0.5),
+        0 0 60px rgba(108, 92, 231, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.strength-modal-overlay.active .strength-modal {
+    transform: scale(1) translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+    color: var(--text-secondary);
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    line-height: 1;
+}
+
+.modal-close:hover {
+    background: rgba(255, 80, 80, 0.15);
+    color: #ff6b6b;
+    transform: rotate(90deg);
+}
+
+.modal-icon {
+    font-size: 2.5rem;
+    margin-bottom: 14px;
+}
+
+.modal-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 14px;
+}
+
+.modal-description {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+}
+
 /* ---------- Certifications ---------- */
 .cert-list {
     display: flex;
