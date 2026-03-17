@@ -597,7 +597,6 @@ body {
 
 /* ---------- Clickable Strengths ---------- */
 .strength-item.clickable {
-    cursor: pointer;
     position: relative;
 }
 
