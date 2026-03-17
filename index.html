@@ -24,7 +24,6 @@
     <!-- Main Container -->
     <div class="resume-container">
 
-        <!-- Header / Hero Section -->
         <header class="hero" id="hero">
             <div class="hero-glow"></div>
             <div class="avatar-wrapper">
@@ -45,7 +44,7 @@
                         <rect x="2" y="4" width="20" height="16" rx="2" />
                         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                     </svg>
-                    Mail
+                    Email
                 </a>
                 <a href="tel:+919356829889" class="contact-chip">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -73,13 +72,11 @@
             </div>
         </header>
 
-        <!-- Content Grid -->
         <div class="content-grid">
 
             <!-- Left Column -->
             <div class="col-left">
 
-                <!-- About Me -->
                 <section class="card animate-in" data-delay="100">
                     <div class="card-header">
                         <div class="card-icon">
@@ -100,7 +97,6 @@
                     </p>
                 </section>
 
-                <!-- Education -->
                 <section class="card animate-in" data-delay="200">
                     <div class="card-header">
                         <div class="card-icon">
@@ -150,7 +146,6 @@
                     </div>
                 </section>
 
-                <!-- Projects -->
                 <section class="card animate-in" data-delay="300">
                     <div class="card-header">
                         <div class="card-icon">
@@ -182,7 +177,7 @@
                             management,
                             user authentication, and payment gateway integration using PhonePe.</p>
                         <div class="project-tech">
-                            <span>HTML</span><span>CSS</span><span>React JS</span><span>PhonePe API</span>
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PhonePe API</span>
                         </div>
                         <a href="https://buyzeraa.netlify.app" target="_blank" class="project-link">🔗
                             buyzeraa.netlify.app</a>
@@ -193,10 +188,8 @@
 
             </div>
 
-            <!-- Right Column -->
             <div class="col-right">
 
-                <!-- Technical Skills -->
                 <section class="card animate-in" data-delay="150">
                     <div class="card-header">
                         <div class="card-icon">
@@ -255,7 +248,6 @@
                     </div>
                 </section>
 
-                <!-- Strengths -->
                 <section class="card animate-in" data-delay="250">
                     <div class="card-header">
                         <div class="card-icon">
@@ -268,34 +260,33 @@
                         <h2>Key Strengths</h2>
                     </div>
                     <div class="strengths-grid">
-                        <div class="strength-item">
+                        <div class="strength-item clickable" data-concept="Problem Solving is the ability to identify, analyze, and resolve challenges efficiently. It involves breaking down complex issues into smaller, manageable parts, evaluating possible solutions, and implementing the best approach. In software development, this means debugging code, optimizing algorithms, designing scalable architectures, and finding creative workarounds under constraints.">
                             <div class="strength-icon">🎯</div>
                             <span>Problem Solving</span>
                         </div>
-                        <div class="strength-item">
+                        <div class="strength-item clickable" data-concept="Team Collaboration is the ability to work effectively with others toward a shared goal. It involves clear communication, active listening, respecting different viewpoints, and contributing individual strengths to achieve collective success. In tech, this means participating in code reviews, pair programming, agile ceremonies, and cross-functional coordination.">
                             <div class="strength-icon">🤝</div>
                             <span>Team Collaboration</span>
                         </div>
-                        <div class="strength-item">
+                        <div class="strength-item clickable" data-concept="Quick Learner refers to the ability to rapidly acquire new knowledge and skills. It involves curiosity, self-motivation, and an eagerness to explore unfamiliar technologies or concepts. In the fast-paced tech industry, this means adapting to new frameworks, languages, and tools efficiently to stay current and productive.">
                             <div class="strength-icon">📚</div>
                             <span>Quick Learner</span>
                         </div>
-                        <div class="strength-item">
+                        <div class="strength-item clickable" data-concept="Time Management is the skill of organizing and planning how to divide your time between tasks effectively. It involves setting priorities, creating schedules, meeting deadlines, and avoiding procrastination. For developers, this means balancing feature development, bug fixes, testing, and learning within limited timeframes.">
                             <div class="strength-icon">⏰</div>
                             <span>Time Management</span>
                         </div>
-                        <div class="strength-item">
+                        <div class="strength-item clickable" data-concept="Creative Thinking is the ability to look at problems and situations from fresh perspectives and generate innovative ideas. It involves thinking outside the box, experimenting with unconventional approaches, and combining existing concepts in new ways. In software, this drives unique UI/UX designs, novel feature implementations, and inventive solutions to technical challenges.">
                             <div class="strength-icon">💡</div>
                             <span>Creative Thinking</span>
                         </div>
-                        <div class="strength-item">
+                        <div class="strength-item clickable" data-concept="Adaptability is the capacity to adjust quickly to new conditions, technologies, or changing requirements. It involves staying flexible, embracing change, and maintaining productivity under uncertainty. In the tech world, this means smoothly transitioning between projects, pivoting when plans change, and continuously evolving your skill set.">
                             <div class="strength-icon">🔄</div>
                             <span>Adaptability</span>
                         </div>
                     </div>
                 </section>
 
-                <!-- Certifications -->
                 <section class="card animate-in" data-delay="350">
                     <div class="card-header">
                         <div class="card-icon">
@@ -343,7 +334,6 @@
                     </div>
                 </section>
 
-                <!-- Interests -->
                 <section class="card animate-in" data-delay="450">
                     <div class="card-header">
                         <div class="card-icon">
@@ -369,7 +359,6 @@
 
         </div>
 
-        <!-- Footer -->
         <footer class="footer">
             <div class="footer-line"></div>
             <p>&copy; 2026 Raj Patil &mdash; Crafted with passion for technology</p>
@@ -378,6 +367,15 @@
     </div>
 
     <script src="script.js"></script>
+
+    <div class="strength-modal-overlay" id="strengthModal">
+        <div class="strength-modal">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-icon" id="modalIcon"></div>
+            <h3 class="modal-title" id="modalTitle"></h3>
+            <p class="modal-description" id="modalDescription"></p>
+        </div>
+    </div>
 </body>
 
 </html>
